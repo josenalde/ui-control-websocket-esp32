@@ -21,7 +21,7 @@ const char* password = "discipulo";
 static const float R = 10000; //ohms 10k
 static const float C = 0.0001; //faraday 100 uF
 static const float timeConstant = R*C;
-static const TickType_t samplingInterval = ((timeConstant*1000)/10.) / portTICK_PERIOD_MS; // 200ms = 0.2s
+static const TickType_t samplingInterval = ((timeConstant*1000)/10.) / portTICK_PERIOD_MS; // 100ms = 0.1s
 static const TickType_t timeToApplyMV = (timeConstant*4*1000) / portTICK_PERIOD_MS; 
 
 // Globals
