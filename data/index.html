@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ESP32 CONTROL DASHBOARD - PPGMECA UFRN EMBEDDED SYSTEMS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="topnav">
+            <h1>RC circuit identification - Embedded Systems PPGMECA UFRN</h1>
+        </div>
+        <div class="content">
+            <div class="card-grid">
+                <div class="card">
+                    <p class="card-title"><i class="fas fa-thermometer-threequarters" style="color:#059e8a;"></i> Time</p>
+                    <p class="reading"><span id="time"></span> s</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> MV (input voltage)</p>
+                    <p class="reading"><span id="MV"></span> V</p>
+                </div>
+                <div class="card">
+                    <p class="card-title"> PV (capacitor voltage)</p>
+                    <p class="reading"><span id="PV"></span> V</p>
+                </div>
+            </div>
+        </div>
+        <form action="/discharge" method="POST">
+        <div class="container">
+            <button type="submit" class="btn btn-danger" name="discharge" value="1">Discharge Capacitor</button>
+        </div>
+        </form>
+        <script src="script.js"></script>
+    </body>
+</html>
+
